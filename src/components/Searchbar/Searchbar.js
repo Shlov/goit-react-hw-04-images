@@ -1,7 +1,8 @@
 import { useState } from "react";
 import toast from 'react-hot-toast';
 import { Btn, Form, Header, Input } from "./Searchbar.styled";
-import {GiBugNet} from 'react-icons/gi'
+import {GiBugNet} from 'react-icons/gi';
+import PropTypes from 'prop-types';
 
 
 export const Searchbar = ({onSubmit}) => {
@@ -36,6 +37,10 @@ export const Searchbar = ({onSubmit}) => {
         </Form>
       </Header>
     )
+}
+
+Searchbar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 }
 
 // export class Searchbar extends Component {

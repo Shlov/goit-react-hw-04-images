@@ -1,6 +1,7 @@
-import { Overlay, Window } from "./Modal.styled"
-import {createPortal} from 'react-dom'
+import { Overlay, Window } from "./Modal.styled";
+import {createPortal} from 'react-dom';
 import { useEffect } from "react";
+import PropTypes from 'prop-types';
 
 const modalRoot = document.querySelector('#root-modal');
 
@@ -32,6 +33,13 @@ export const Modal = ({img, onClose}) => {
     ,modalRoot
   )
 }
+
+Modal.propTypes = {
+  img: PropTypes.object.isRequired,
+  onClose: PropTypes.func.isRequired,
+}
+
+
 
 // export class Modal extends Component {
   
