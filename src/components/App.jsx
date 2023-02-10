@@ -78,7 +78,7 @@ export const App = () => {
       {status === 'resolved' && <Button onClick={loadMore}/>}
       {status === 'end' && <Message><h2>Це всі зображення, що знайшли 🙃</h2></Message>}
       {status === 'absent' && <Message><h2>No results found for "{tagImg}".</h2></Message>}
-      {status === 'rejected' && <Message><h2>ERROR </h2></Message>}
+      {status === 'rejected' && <Message><h2>ERROR {console.log(error)}</h2></Message>}
 
       <Toaster position="bottom-center"/>
     </>
